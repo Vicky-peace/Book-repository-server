@@ -15,7 +15,7 @@ The Books-Repo API is a RESTful web service designed to manage a digital reposit
 
 ### Prerequisites
 
-- **Deno**: The project is built with Deno. Ensure Deno is installed on your machine. You can install Deno from [Deno's installation page](https://deno.land/#installation).
+
 - **PostgreSQL**: You will need PostgreSQL installed and running on your system. This database will store the books data.
 
 ### Installation
@@ -24,5 +24,4 @@ The Books-Repo API is a RESTful web service designed to manage a digital reposit
    Use the following command to clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/books-repo-api.git
-   cd books-repo-api
+   git clone https://github.com/Vicky-peace/Book-repository-server.git
