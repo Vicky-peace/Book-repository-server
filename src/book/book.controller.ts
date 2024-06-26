@@ -23,3 +23,39 @@ export const getBook = async(c: Context) => {
     }
    
 }
+
+
+export const createBook = async(c: Context) => {
+    try {
+        const book = await c.req.json();
+        const message = await createBookService(book);
+        return c.json({message});       
+        
+    } catch (error: any) {
+        return c.json({error: error.message}, 500);
+    }
+}
+
+
+export const updateBook = async(c: Context) => {
+    try {
+        const id = Number(c.req.param('id'));
+        const book = await c.req.json();
+        const message = await updateBookService(id, book);
+        return c.json({message});
+    } catch (error: any) {
+        return c.json({error: error.message}, 500);
+    }
+}   
+
+
+export const deleteBook = async(c: Context) => {
+    try {
+        const id = Number(c.req.param('id'));
+        const message = await deleteBookService(id);
+        return c.json({message});
+        
+    } catch (error: any) {
+        return c.json({error: error.message}, 500);
+    }
+}
